@@ -1,0 +1,227 @@
+$globalDuration: 10s;
+
+html{
+    height: 100%;
+}
+
+.ipads{
+    color: green;
+}
+.bands{
+    color: yellow;
+}
+.looser{
+    color: red;
+}
+
+body{
+    background: radial-gradient(#430086, #030017);
+    background-repeat: no-repeat;
+    
+    /*background-image: url("fond.png");*/
+    
+
+    height: 100%;
+    margin: 0;
+    
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.boutton{
+    width: 100px;
+    height: 10%;
+}
+.boutton:hover{
+    opacity: 0.5;
+}
+
+#button{
+    width: 30%;
+    background-image: url("button.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}#button:hover{
+    background-image: url("button_hover.svg");
+}
+
+body, #button_row, #arrow_row, #wheel_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#mega_container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#result{
+    height:17%;
+    text-align: center;
+    font-size: 200%;
+    opacity: 0; 
+}
+#arrow_row{
+    height: 8%;
+    background-image: url("arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#wheel_row{
+    height: 55%;
+    margin-bottom: 2%;
+}
+#button_row{
+    height: 13%;
+}
+#right_deco, #left_deco{
+    width: 25%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#left_deco{
+    background-image: url("left.svg");
+    background-position: left;
+}
+#right_deco{
+    background-image: url("right.svg");
+    background-position: right;
+}
+footer{
+    height: 5%;
+    background-image: url("lmsi.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+header{
+    margin-top:1%;
+    height: 4%;
+    background-image: url("ca.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+
+/*ANIMATIONS*/
+#roue{
+    transition: all 0.5s ease;
+}
+.rotate_arrow{
+    animation-name: debut_fleche, milieu_fleche, fin_fleche;
+    animation-delay: 0s, (0.1*$globalDuration) , (0.9*$globalDuration);
+    animation-duration: (0.1*$globalDuration), (0.025*$globalDuration), (0.1*$globalDuration);
+    animation-iteration-count: 1, (0.8*$globalDuration)/(0.025*$globalDuration), 1;
+    animation-timing-function: ease, linear, ease;
+}
+.rotate_ipad{
+    transition: all 10s ease !important;
+    transform: rotate(3600deg);
+}
+.rotate_bracelet1{
+    transition: all 10s ease !important;
+    transform: rotate(3540deg);
+}
+.rotate_bracelet2{
+    transition: all 10s ease !important;
+    transform: rotate(3480deg);
+}
+.rotate_bracelet3{
+    transition: all 10s ease !important;
+    transform: rotate(3420deg);
+}
+.rotate_bracelet4{
+    transition: all 10s ease !important;
+    transform: rotate(3360deg);
+}
+.rotate_bracelet5{
+    transition: all 10s ease !important;
+    transform: rotate(3300deg);
+}
+.rotate_perdu1{
+    transition: all 10s ease !important;
+    transform: rotate(3570deg);
+}
+.rotate_perdu2{
+    transition: all 10s ease !important;
+    transform: rotate(3510deg);
+}
+.rotate_perdu3{
+    transition: all 10s ease !important;
+    transform: rotate(3450deg);
+}
+.rotate_perdu4{
+    transition: all 10s ease !important;
+    transform: rotate(3390deg);
+}
+.rotate_perdu5{
+    transition: all 10s ease !important;
+    transform: rotate(3330deg);
+}
+.rotate_perdu6{
+    transition: all 10s ease !important;
+    transform: rotate(3270deg);
+}
+.blink{ 
+    animation: blink 1s $globalDuration cubic-bezier(.76,.05,.86,.06) infinite;
+}
+
+
+/*KEYFRAMES*/
+@keyframes fleche {
+    0%,100% {
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    10%,30%,50%,70%,90%,
+    1%,40%,60%,80% {
+        transform: rotate(-20deg);
+        transform-origin: top center;
+    }
+    5%, 15%,35%,55%,75%,95%,
+    25%,45%,65%,85%
+    {
+        transform: rotate(-15deg);
+        transform-origin: top center;
+    }
+}
+@keyframes debut_fleche{
+    100%{
+        transform: rotate(-15deg);
+        transform-origin: top center;
+    }
+}
+@keyframes milieu_fleche{
+    0%, 100%{
+        transform: rotate(-15deg);
+        transform-origin: top center;
+    }
+    50%{
+        transform: rotate(-20deg);
+        transform-origin: top center;
+    }
+}
+@keyframes fin_fleche{
+    0%{
+        transform: rotate(-15deg);
+        transform-origin: top center;
+    }
+    100%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+}
+@keyframes blink {
+    0%,100% { 
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}

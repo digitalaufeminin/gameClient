@@ -1,0 +1,200 @@
+html {
+  height: 100%; }
+
+.ipads {
+  color: green; }
+
+.bands {
+  color: yellow; }
+
+.looser {
+  color: red; }
+
+body {
+  background: radial-gradient(#430086, #030017);
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; }
+
+.boutton {
+  width: 100px;
+  height: 65%; }
+
+.boutton:hover {
+  opacity: 0.5; }
+
+#button {
+  width: 50%;
+  background-image: url("svg/button.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+
+#button:hover {
+  background-image: url("svg/button_hover.svg"); }
+
+body, #button_row, #arrow_row, #wheel_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+#mega_container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+#result {
+  height: 17%;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 200%;
+  opacity: 0; }
+
+#arrow_row {
+  height: 8%;
+  background-image: url("svg/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+
+#wheel_row {
+  height: 55%;
+  margin-bottom: 5%; }
+
+#button_row {
+  height: 65%; }
+
+#right_deco, #left_deco {
+  width: 25%;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+#left_deco {
+  background-image: url("svg/left.svg");
+  background-position: left; }
+
+#right_deco {
+  background-image: url("svg/right.svg");
+  background-position: right; }
+
+footer {
+  height: 10%;
+  background-image: url("svg/lmsi.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+
+header {
+  margin-top: 1%;
+  height: 4%;
+  background-image: url("svg/ca.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+
+/*ANIMATIONS*/
+#roue {
+  transition: all 0.5s ease; }
+
+.rotate_arrow {
+  animation-name: debut_fleche, milieu_fleche, fin_fleche;
+  animation-delay: 0s, 1s, 9s;
+  animation-duration: 1s, 0.25s, 1s;
+  animation-iteration-count: 1, 32, 1;
+  animation-timing-function: ease, linear, ease; }
+
+/*ipad*/
+.rotate_1 { 
+  transition: all 10s ease !important;
+  transform: rotate(3600deg); }
+
+/*bracelets*/
+.rotate_2 {
+  transition: all 10s ease !important;
+  transform: rotate(3540deg); }
+
+.rotate_3 {
+  transition: all 10s ease !important;
+  transform: rotate(3480deg); }
+
+.rotate_4 {
+  transition: all 10s ease !important;
+  transform: rotate(3420deg); }
+
+.rotate_5 {
+  transition: all 10s ease !important;
+  transform: rotate(3360deg); }
+
+.rotate_6 {
+  transition: all 10s ease !important;
+  transform: rotate(3300deg); }
+
+/*perdus*/
+.rotate_7 {
+  transition: all 10s ease !important;
+  transform: rotate(3570deg); }
+
+.rotate_8 {
+  transition: all 10s ease !important;
+  transform: rotate(3510deg); }
+
+.rotate_9 {
+  transition: all 10s ease !important;
+  transform: rotate(3450deg); }
+
+.rotate_10{
+  transition: all 10s ease !important;
+  transform: rotate(3390deg); }
+
+.rotate_11 {
+  transition: all 10s ease !important;
+  transform: rotate(3330deg); }
+
+.rotate_12 {
+  transition: all 10s ease !important;
+  transform: rotate(3270deg); }
+
+.blink {
+  animation: blink 1s 10s cubic-bezier(0.76, 0.05, 0.86, 0.06) infinite; }
+
+/*KEYFRAMES*/
+@keyframes fleche {
+  0%,100% {
+    transform: rotate(0deg);
+    transform-origin: top center; }
+  10%,30%,50%,70%,90%,
+    1%,40%,60%,80% {
+    transform: rotate(-20deg);
+    transform-origin: top center; }
+  5%, 15%,35%,55%,75%,95%,
+    25%,45%,65%,85% {
+    transform: rotate(-15deg);
+    transform-origin: top center; } }
+@keyframes debut_fleche {
+  100% {
+    transform: rotate(-15deg);
+    transform-origin: top center; } }
+@keyframes milieu_fleche {
+  0%, 100% {
+    transform: rotate(-15deg);
+    transform-origin: top center; }
+  50% {
+    transform: rotate(-20deg);
+    transform-origin: top center; } }
+@keyframes fin_fleche {
+  0% {
+    transform: rotate(-15deg);
+    transform-origin: top center; }
+  100% {
+    transform: rotate(0deg);
+    transform-origin: top center; } }
+@keyframes blink {
+  0%,100% {
+    opacity: 0; }
+  50% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=style.css.map */
